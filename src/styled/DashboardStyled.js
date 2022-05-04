@@ -42,7 +42,8 @@ export const ContainerBottom = styled.section`
 
 export const ContainerBottomInfo = styled.section`
 	width: 100%;
-	height: 100%;
+	height: auto;
+	padding-bottom: 2vh;
 	margin-top: 6vh;
 	display: flex;
 	justify-content: end;
@@ -94,7 +95,8 @@ export const TextBottom = styled.h1`
 
 export const ContainerBottomInfoRightBottom = styled.section`
 	width: 100%;
-	height: 60%;
+	min-height: 60%;
+	max-height: auto;
 	border-radius: 12px;
 	background-color: white;
 	display: flex;

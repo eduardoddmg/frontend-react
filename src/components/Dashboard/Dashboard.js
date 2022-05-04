@@ -107,11 +107,20 @@ const Dashboard = () => {
 						<ContainerBottomInfoRight>
 							<ContainerBottomInfoRightTop>
 								<ContainerBottomInfoRightTopText>
-									<TextTop>{result.TOTAL}</TextTop>
+									<TextTop>{result && result.TOTAL}</TextTop>
 									<TextBottom>Prestadores</TextBottom>
 								</ContainerBottomInfoRightTopText>
 								<ContainerBottomInfoRightTopImg src={require('../../assets/doctor.png')} /> 
-							</ContainerBottomInfoRightTop>	
+							</ContainerBottomInfoRightTop>
+							<ContainerBottomInfoRightBottom>
+								{result && result.RANK.map((value, index) => {
+									return (
+										<SectionBarra>
+											{value.qtd} {value.tip_desc}
+										</SectionBarra>
+									)
+								})}
+							</ContainerBottomInfoRightBottom>	
 						</ContainerBottomInfoRight>
 					</ContainerBottomInfo>
 			</ContainerBottom>
